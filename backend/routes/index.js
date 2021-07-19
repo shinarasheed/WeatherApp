@@ -1,9 +1,9 @@
 import express from 'express';
 
-import userRoutes from '../routes/userRoutes';
+import weatherRoutes from '../routes/weatherRoutes';
 
 const router = express.Router();
 
-router.use('/users', userRoutes);
+router.use('/weather', weatherRoutes);
 
 export default router;

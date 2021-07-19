@@ -23,10 +23,11 @@ app.get('/', (req, res) => {
   res.send('API is running');
 });
 
+app.use('/api/v1', router);
+
 app.all('*', (req, res, next) => {
   res.status(404).send(`Can't find ${req.originalUrl} on this server!`);
+  next();
 });
-
-app.use('/api/v1', router);
 
 export default app;
