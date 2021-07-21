@@ -1,0 +1,12 @@
+@import './WeatherInfoPanel';
+
+.weather-panels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+
+  @media screen and(max-width:786px) {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+}
