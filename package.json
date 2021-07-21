@@ -1,14 +1,16 @@
 {
   "name": "weatherapp",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "description": " a weather application",
   "main": "server.js",
   "scripts": {
     "start": "node -r esm backend/server",
     "server": "nodemon -r esm backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "shina",
   "license": "MIT",
