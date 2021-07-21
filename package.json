@@ -11,7 +11,7 @@
     "server": "nodemon -r esm backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client/src && npm install && npm run build"
+    "heroku-postbuild": "cd frontend/src && npm install && npm run build"
   },
   "author": "shina",
   "license": "MIT",
