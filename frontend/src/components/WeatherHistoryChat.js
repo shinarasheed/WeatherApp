@@ -16,9 +16,6 @@ const WeatherHistoryChat = () => {
     barData = weatherData.data.hourly.map((data) => data.humidity);
   }
 
-  console.log(barLabel);
-  console.log(barData);
-
   const data = {
     labels: barLabel,
     datasets: [

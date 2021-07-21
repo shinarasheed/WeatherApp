@@ -3,12 +3,18 @@ import { useSelector } from 'react-redux';
 
 const WeatherInfoPanel = () => {
   const weather = useSelector((state) => state.weather);
-  const { weatherData, isLoading } = weather;
+  const { weatherData, error, isLoading } = weather;
+
+  console.log(error);
   return (
     <>
       {isLoading ? (
         <div className="d-flex justify-content-center">
           <p>Loading...</p>
+        </div>
+      ) : error ? (
+        <div className="text-center">
+          <p style={{ fontSize: '30px', color: 'red' }}>{error}</p>
         </div>
       ) : weatherData === null ? (
         <div></div>

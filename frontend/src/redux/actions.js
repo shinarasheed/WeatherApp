@@ -40,9 +40,8 @@ export const getWeather = (cityName) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: GET_WEATHER_FAIL,
-      payload: error,
+      payload: 'Please enter a valid city name',
     });
-    console.log(`could not get weather info : ${error}`);
   }
 };
 

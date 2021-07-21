@@ -10,6 +10,11 @@ const getWeatherData = async (req, res) => {
     const data = await response.data;
     res.status(200).json({ status: 'sucess', data });
   } catch (error) {
+    if (error.response.statusText === 'Not Found') {
+      return res
+        .status(404)
+        .json({ status: 'error', message: 'Please end a valid city name' });
+    }
     res.status(500).json({ status: 'error', message: 'server error' });
     console.log(error.message);
   }

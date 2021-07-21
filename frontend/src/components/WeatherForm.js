@@ -35,7 +35,9 @@ const WeatherFormSecond = () => {
     <section className="forms-container">
       <div className="d-flex gap-3">
         <Button onClick={() => handleGetWeather()}>Get Weather</Button>
-        <Button onClick={() => handleGetWeatherHistory()}>Get History</Button>
+        <Button onClick={() => handleGetWeatherHistory()}>
+          Get Temp Variatn From 5 days
+        </Button>
       </div>
       <div>
         <Form className="city-weather" onSubmit={handleOnsubmit}>
